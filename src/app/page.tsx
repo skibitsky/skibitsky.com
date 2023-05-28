@@ -30,7 +30,7 @@ export default function Home() {
         <div className="space-y-3 lg:text-xl">
           <p>{getGreeting()}, I am traveller and software engineer from 🇱🇹 Lithuania.</p>
           <p>
-            Today I am in <span className="bg-amber-100 px-2 py-1 rounded-xl">🇯🇵⛩️ Tokyo, Japan</span>, you can follow me on <a className="text-[#E4405F] font-medium hover:underline" href="https://www.instagram.com/gleb.skibitsky/" target="_blank" rel="noreferrer">Instagram</a> or <a className="text-[#1DA1F2] font-medium hover:underline" href="https://twitter.com/skibitksy" target="_blank" rel="noreferrer">Twitter</a> for updates.
+            Today I am in <span className="bg-amber-100 px-2 py-1 rounded-xl">🇯🇵⛩️ Tokyo, Japan</span>, you can follow me on <a className="text-[#E4405F] font-medium hover:underline" href="https://www.instagram.com/gleb.skibitsky/" target="_blank" rel="noreferrer">Instagram</a> or <a className="text-[#1DA1F2] font-medium hover:underline" href="https://twitter.com/skibitsky" target="_blank" rel="noreferrer">Twitter</a> for updates.
           </p>
           <p>
             This website is currently undergoing 👷‍♂️ improvements. I’m working on new features and content. Stay tuned for updates, and thank you for your patience 🙇‍♂️

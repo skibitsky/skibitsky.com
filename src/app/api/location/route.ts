@@ -1,0 +1,21 @@
+import { kv } from '@vercel/kv';
+import { NextResponse } from 'next/server';
+
+export async function GET() {
+  const currentLocation = await kv.hgetall('location:current');
+  return NextResponse.json({location: currentLocation});
+}
+
+export async function POST(request: Request) {
+  const authHeader = request.headers.get('Authorization');
+  if (!authHeader || !authHeader.toLowerCase().startsWith('bearer ') || authHeader.slice(7) !== process.env.API_AUTH_KEY) {
+    return new Response(JSON.stringify({error: 'Invalid key'}), {
+      status: 403,
+      headers: {'Content-Type': 'application/json'},
+    });
+  }
+
+  const newLocation = await request.json();
+  await kv.hset('location:current', newLocation);
+  return NextResponse.json({location: newLocation});
+}

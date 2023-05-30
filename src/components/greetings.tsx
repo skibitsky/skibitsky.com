@@ -16,5 +16,5 @@ function getGreeting(): string {
 }
 
 export default () => (
-  <p>{getGreeting()}, I am traveller and software engineer from 🇱🇹 Lithuania.</p>
+  <p>{getGreeting()}, I am a traveller and software engineer from 🇱🇹 Lithuania.</p>
 )

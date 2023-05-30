@@ -15,7 +15,7 @@ export async function POST(request: Request) {
     });
   }
 
-  const newLocation = await request.json();
-  await kv.set('location:current', newLocation);
-  return NextResponse.json({location: newLocation});
+  const body: {location: string} = await request.json();
+  await kv.set('location:current', body.location);
+  return NextResponse.json(body);
 }

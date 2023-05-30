@@ -8,7 +8,6 @@ export const revalidate = 3600 // 1 hour
 const Location = async () => {
   const res = await fetch('https://skibitsky.com/api/location')
   const body = await res.json()
-  console.log(body)
 
   return (<span className="text-base bg-amber-100 px-2 py-1 rounded-xl">{body.location}</span>)
 }

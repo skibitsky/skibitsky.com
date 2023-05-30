@@ -3,7 +3,7 @@ import Greetings from "@/components/greetings";
 
 const garamond = EB_Garamond({ subsets: ['latin'], display: 'swap', variable: '--font-garamond' })
 
-export const revalidate = 3600 // 1 hour
+export const revalidate = 86400 // 24 hours
 
 const Location = async () => {
   const res = await fetch('https://skibitsky.com/api/location')

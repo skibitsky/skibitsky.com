@@ -1,5 +1,6 @@
 import { kv } from '@vercel/kv';
 import { NextResponse } from 'next/server';
+import { revalidatePath } from "next/cache";
 
 export async function GET() {
   const currentLocation = await kv.get('location:current');
@@ -17,5 +18,8 @@ export async function POST(request: Request) {
 
   const body: {location: string} = await request.json();
   await kv.set('location:current', body.location);
+
+  revalidatePath('/');
+
   return NextResponse.json(body);
 }

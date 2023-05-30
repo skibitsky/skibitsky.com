@@ -2,7 +2,7 @@ import { kv } from '@vercel/kv';
 import { NextResponse } from 'next/server';
 
 export async function GET() {
-  const currentLocation = await kv.hgetall('location:current');
+  const currentLocation = await kv.get('location:current');
   return NextResponse.json({location: currentLocation});
 }
 
@@ -16,6 +16,6 @@ export async function POST(request: Request) {
   }
 
   const newLocation = await request.json();
-  await kv.hset('location:current', newLocation);
+  await kv.set('location:current', newLocation);
   return NextResponse.json({location: newLocation});
 }

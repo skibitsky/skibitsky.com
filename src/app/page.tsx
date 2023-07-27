@@ -29,6 +29,9 @@ export default async function Page() {
           <p>
             This website is currently undergoing 👷‍♂️ improvements. I’m working on new features and content. Stay tuned for updates, and thank you for your patience 🙇‍♂️
           </p>
+          <p>
+            Recently, I launched <a className="text-violet-700 font-medium hover:underline" href="https://filekey.io" target="_blank" rel="noreferrer">FileKey</a> — a simple and secure way to upload and download files from cloud without authentication. It’s a little side project I made while settling in Sapporo.
+          </p>
         </div>
       </div>
     </main>

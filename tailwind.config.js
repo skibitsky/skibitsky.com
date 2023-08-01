@@ -7,10 +7,33 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['var(--font-garamond)'],
-      },
+      // fontFamily: {
+      //   sans: ['var(--font-garamond)', 'var(--font-nunito)'],
+      // },
+      colors: {
+        home: {
+          main: '#FF0303',
+          secondary: '#ffbc48',
+          background: '#F9DBBB'
+        },
+        projects: {
+          main: '#6d28d9',
+          secondary: '#E8AA42',
+          background: '#D3ECA7'
+        },
+        contact: {
+          main: '#da434a',
+          secondary: '#F8F1F1',
+          background: '#895c32'
+        },
+      }
     },
   },
   plugins: [],
+  safelist: [
+    {
+      pattern: /bg-(home|projects|contact)-(main|secondary|background)/,
+      variants: ['lg', 'hover', 'focus', 'lg:hover'],
+    },
+  ],
 }

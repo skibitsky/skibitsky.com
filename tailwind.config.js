@@ -29,7 +29,9 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require("tailwindcss-animate"),
+  ],
   safelist: [
     {
       pattern: /bg-(home|projects|contact)-(main|secondary|background)/,

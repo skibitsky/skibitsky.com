@@ -4,6 +4,8 @@ import Menu from '@/components/menu'
 import Background from '@/components/background'
 import gleb from '../../public/gleb.svg'
 import Image from 'next/image'
+import SocialLink from '@/components/social-link'
+import instaQr from './../../public/insta.webp'
 
 const garamond = EB_Garamond({ subsets: ['latin'], display: 'swap' })
 
@@ -32,7 +34,7 @@ export default async () => {
                 <Greetings />
                 <p>
                   {/* @ts-expect-error Async Server Component */}
-                  Today I am in <Location />, you can follow me on <a className="text-[#E4405F] font-medium hover:underline" href="https://www.instagram.com/gleb.skibitsky/" target="_blank" rel="noreferrer">Instagram</a> or <a className="text-[#1DA1F2] font-medium hover:underline" href="https://twitter.com/skibitsky" target="_blank" rel="noreferrer">Twitter</a> for updates.
+                  Today I am in <Location />, you can follow me on <SocialLink color="#E4405F" href="https://www.instagram.com/gleb.skibitsky/" text="Instagram" image={instaQr}/> or <a className="text-[#1DA1F2] font-medium hover:underline" href="https://twitter.com/skibitsky" target="_blank" rel="noreferrer">Twitter</a> for updates.
                 </p>
                 <p>
                   This website is currently undergoing 👷‍♂️ improvements. I’m working on new features and content. Stay tuned for updates, and thank you for your patience 🙇‍♂️

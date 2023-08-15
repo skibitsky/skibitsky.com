@@ -26,6 +26,10 @@ module.exports = {
           secondary: '#F8F1F1',
           background: '#895c32'
         },
+        social: {
+          instagram: '#E4405F',
+          twitter: '#1DA1F2',
+        }
       }
     },
   },
@@ -37,5 +41,8 @@ module.exports = {
       pattern: /bg-(home|projects|contact)-(main|secondary|background)/,
       variants: ['lg', 'hover', 'focus', 'lg:hover'],
     },
+    {
+      pattern: /(decoration|text)-(instragram|twitter)-*/
+    }
   ],
 }

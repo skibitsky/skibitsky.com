@@ -8,18 +8,19 @@ interface Props {
   color: string
   href: string
   image: StaticImport
+  imageAlt: string
 }
 
-export default ({text, color, href, image}: Props) => {
-  const textColor = `text-[${color}]`
+export default ({text, color, href, image, imageAlt}: Props) => {
+  const textClassName = `text-${color} font-medium hover:underline`
   return (
     <HoverCard openDelay={300}>
       <HoverCardTrigger asChild>
-        <a className={`${textColor} font-medium hover:underline`} href={href} target="_blank" rel="noreferrer">{text}</a>
+        <a className={textClassName} href={href} target="_blank" rel="noreferrer">{text}</a>
       </HoverCardTrigger>
       <HoverCardContent side="top">
         <HoverCardArrow/>
-        <Image src={image} alt="@gleb.skibitsky"/>
+        <Image src={image} alt={imageAlt} priority={true}/>
       </HoverCardContent>
     </HoverCard>
   )

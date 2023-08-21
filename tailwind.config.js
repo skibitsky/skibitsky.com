@@ -42,7 +42,7 @@ module.exports = {
       variants: ['lg', 'hover', 'focus', 'lg:hover'],
     },
     {
-      pattern: /(decoration|text)-(instragram|twitter)-*/
+      pattern: /(decoration|text)-social-(instagram|twitter)-*/
     }
   ],
 }

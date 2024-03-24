@@ -10,7 +10,8 @@ import xQr from './../../public/x.png'
 
 const garamond = EB_Garamond({ subsets: ['latin'], display: 'swap' })
 
-export const revalidate = 86400 // 24 hours
+//export const revalidate = 86400 // 24 hours
+export const revalidate = 0
 
 const Location = async () => {
   const res = await fetch('https://skibitsky.com/api/location')

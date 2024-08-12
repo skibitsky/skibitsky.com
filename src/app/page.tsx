@@ -37,9 +37,6 @@ export default async () => {
                   {/* @ts-expect-error Async Server Component */}
                   Today I am in <Location />, you can follow me on <SocialLink color="social-instagram" href="https://www.instagram.com/gleb.skibitsky/" text="Instagram" image={instaQr} imageAlt="@gleb.skibitsky"/> or <SocialLink color="social-twitter" href="https://twitter.com/skibitsky/" text="Twitter" image={xQr} imageAlt="@skibitsky"/> for updates.
                 </p>
-                <p>
-                  This website is currently undergoing 👷‍♂️ improvements. I’m working on new features and content. Stay tuned for updates, and thank you for your patience 🙇‍♂️
-                </p>
               </div>
             </div>
           </div>

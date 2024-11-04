@@ -33,10 +33,17 @@ export default async () => {
             <div className="max-h-fit flex flex-col gap-3 sm:gap-5 p-8 mx-8 lg:ml-16 lg:p-12 rounded-lg">
               <div className={`${garamond.className} font-sans text-3xl sm:text-4xl lg:text-6xl font-semibold text-[#2b2727]`}>Hello, <br/> I'm Gleb Skibitsky</div>
               <div className="space-y-3 lg:text-xl">
-                <Greetings />
+                <Greetings/>
                 <p>
                   {/* @ts-expect-error Async Server Component */}
                   Today I am in <Location />, you can follow me on <SocialLink color="social-instagram" href="https://www.instagram.com/gleb.skibitsky/" text="Instagram" image={instaQr} imageAlt="@gleb.skibitsky"/> or <SocialLink color="social-twitter" href="https://twitter.com/skibitsky/" text="Twitter" image={xQr} imageAlt="@skibitsky"/> for updates.
+                </p>
+                <p className="pt-6">
+                  I build tools for better web3 user experience at <a className="font-bold hover:underline" href="https://reown.com">Reown</a>.
+                </p>
+                <p>
+                  My latest pet project is <a className="font-bold hover:underline" href="https://filekey.io">Filekey</a> — a simple file sharing service that
+                  allows you to upload small files and access them from anywhere without auth.
                 </p>
               </div>
             </div>
